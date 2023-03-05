@@ -1,0 +1,33 @@
+.App,
+.header,
+.body {
+    border-radius: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #67676e;
+    padding: 20px;
+}
+.Restart {
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.body {
+    background-color: #67676e;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+}
