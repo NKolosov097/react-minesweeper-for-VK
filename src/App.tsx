@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { reduceEachTrailingCommentRange } from 'typescript'
 import './App.scss'
 import { ControlDisplay } from './components/ControlDisplay/ControlDisplay'
 import { GeneralCell } from './components/GeneralCell/GeneralCell'
-import { Cell, CellState, Face } from './typesOfCells/types'
-import { generateCells } from './utils/functions'
+import { Cell, CellState, CellValue, Face } from './typesOfCells/types'
+import { generateCells, openMultipleCells } from './utils/functions'
 
 export const App: React.FC = () => {
     const [cells, setCells] = useState<Cell[][]>(generateCells())
@@ -46,6 +47,27 @@ export const App: React.FC = () => {
         (rowParam: number, colParam: number) => (): void => {
             if (!islive) {
                 setIsLive(true)
+            }
+
+            const currentCell = cells[rowParam][colParam]
+            let newCells = cells.slice()
+
+            if (
+                [CellState.flagged, CellState.visible].includes(
+                    currentCell.state
+                )
+            ) {
+                return
+            }
+
+            if (currentCell.value === CellValue.bomb) {
+                return
+            } else if (currentCell.value === CellValue.none) {
+                newCells = openMultipleCells(newCells, rowParam, colParam)
+                setCells(newCells)
+            } else {
+                newCells[rowParam][colParam].state = CellState.visible
+                setCells(newCells)
             }
         }
 
