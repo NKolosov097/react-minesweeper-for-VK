@@ -1,3 +1,4 @@
+@import './styles/styles.scss';
 .App,
 .header,
 .body {
@@ -11,10 +12,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
-    background-color: #67676e;
+    background-color: #838383;
     padding: 20px;
 }
-.Restart {
+.Face {
+    @include cells;
     width: 50px;
     height: 50px;
     font-size: 35px;
@@ -25,9 +27,9 @@
 }
 
 .body {
-    background-color: #67676e;
+    background-color: #838383;
     padding: 20px;
     display: grid;
-    grid-template-rows: repeat(9, 1fr);
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(16, 1fr);
 }
