@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.scss'
 import { ControlDisplay } from './components/ControlDisplay/ControlDisplay'
+import { GeneralCell } from './components/GeneralCell/GeneralCell'
+import { generateCells } from './utils/functions'
 
 export const App: React.FC = () => {
+    const [cells, setCells] = useState(generateCells())
+
+    const renderCells = (): React.ReactNode => {
+        return cells.map((row, rowIndex) =>
+            row.map((cell, colIndex) => (
+                <GeneralCell key={`${rowIndex}-${colIndex}`} />
+            ))
+        )
+    }
+
     return (
         <div className="App">
             <header className="header">
@@ -14,7 +26,7 @@ export const App: React.FC = () => {
                 </div>
                 <ControlDisplay value={23} />
             </header>
-            <div className="body">Body</div>
+            <div className="body">{renderCells()}</div>
         </div>
     )
 }
