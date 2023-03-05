@@ -8,7 +8,9 @@ interface ControlDisplayProps {
 export const ControlDisplay: React.FC<ControlDisplayProps> = ({ value }) => {
     return (
         <div className="ControlDisplay">
-            {value.toString().padStart(2, '0')}
+            {value < 0
+                ? `-${Math.abs(value).toString().padStart(2, '0')}`
+                : value.toString().padStart(3, '0')}
         </div>
     )
 }

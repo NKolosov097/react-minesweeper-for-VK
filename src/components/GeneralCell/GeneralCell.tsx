@@ -8,6 +8,8 @@ interface GeneralCellProps {
     col: number
     state: CellState
     value: CellValue
+    onClick(rowParam: number, colParam: number): (...args: any[]) => void
+    onContext(rowParam: number, colParam: number): (...args: any[]) => void
 }
 
 export const GeneralCell: React.FC<GeneralCellProps> = ({
@@ -15,6 +17,8 @@ export const GeneralCell: React.FC<GeneralCellProps> = ({
     value,
     row,
     col,
+    onClick,
+    onContext,
 }) => {
     const renderContent = (): React.ReactNode => {
         if (state === CellState.visible) {
@@ -45,6 +49,8 @@ export const GeneralCell: React.FC<GeneralCellProps> = ({
             className={`GeneralCell ${
                 state === CellState.visible ? 'visible' : ''
             } value-${value}`}
+            onClick={onClick(row, col)}
+            onContextMenu={onContext(row, col)}
         >
             {renderContent()}
         </div>
