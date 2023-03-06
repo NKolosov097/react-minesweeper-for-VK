@@ -82,7 +82,7 @@ export const generateCells = (): Cell[][] => {
                     return cell
                 })
             )
-            bombsPlaced++
+            bombsPlaced = bombsPlaced + 2
         }
     }
 
