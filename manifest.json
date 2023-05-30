@@ -1,0 +1,9 @@
+{
+    "short_name": "burger-react",
+    "name": "Create React App Burger Joint",
+    "icons": [],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+}
