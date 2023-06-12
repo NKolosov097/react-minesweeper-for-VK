@@ -1,5 +1,7 @@
 # Minesweeper
 
+Ссылка на игру: https://nkolosov097.github.io/react-minesweeper-for-VK/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
