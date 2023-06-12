@@ -8,7 +8,7 @@ import { MAX_COLS, MAX_ROWS } from '../../constants'
 
 import './App.scss'
 
-export const App: React.FC = () => {
+export const App = (): ReactElement => {
     const [cells, setCells] = useState<Cell[][]>(generateCells())
     const [face, setFace] = useState<Face>(Face.smile)
     const [time, setTime] = useState<number>(0)
