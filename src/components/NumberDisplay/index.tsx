@@ -6,7 +6,7 @@ interface NumberDisplayProps {
     value: number
 }
 
-const NumberDisplay: React.FC<NumberDisplayProps> = ({ value }) => {
+function NumberDisplay = ({ value }: NumberDisplayProps): ReactElement => {
     return (
         <div className="NumberDisplay">
             {value < 0
