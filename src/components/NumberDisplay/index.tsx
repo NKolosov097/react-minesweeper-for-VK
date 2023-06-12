@@ -6,7 +6,7 @@ interface NumberDisplayProps {
     value: number
 }
 
-function NumberDisplay = ({ value }: NumberDisplayProps): ReactElement => {
+function NumberDisplay ({ value }: NumberDisplayProps): ReactElement {
     return (
         <div className="NumberDisplay">
             {value < 0
