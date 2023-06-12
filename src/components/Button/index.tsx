@@ -13,7 +13,7 @@ interface ButtonProps {
     value: CellValue
 }
 
-const Button: React.FC<ButtonProps> = ({
+function Button ({
     col,
     onClick,
     onContext,
@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
     row,
     state,
     value,
-}) => {
+}: ButtonProps): ReactElement {
     const renderContent = (): React.ReactNode => {
         if (state === CellState.visible) {
             if (value === CellValue.bomb) {
