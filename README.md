@@ -1,48 +1,42 @@
-# Minesweeper
+<h1 align="center"><a href="https://nkolosov097.github.io/react-minesweeper-for-VK" target="_blank">Minesweeper</a></h1>
+<h3 align="start">Used stack</h3>
+<h4>
+  <ul>
+    <li>Typescript</li>
+    <li>React</li>
+    <li>Gh Pages</li>
+    <li>SASS</li>
+  </ul>
+</h4>
 
-Ссылка на игру: https://nkolosov097.github.io/react-minesweeper-for-VK/
+<hr>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="start">Description</h3>
+  <h4>Online game Minesweeper, where you can enjoy the art of solving puzzles and hone the skill of clicks and mouse </h4>
 
-## Available Scripts
+<hr>
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<details>
+  <summary><h3>Local start of aplication</h3></summary>
+  <ol>
+    <li>
+      <h4>Clone the repository:</h4>
+      <code>git@github.com:NKolosov097/react-minesweeper-for-VK.git</code>
+    </li>
+    <li>
+      <h4>Install all dependencies:</h4>
+      <code>npm i</code>
+      or
+      <code>yarn add</code>
+    </li>
+    <li>
+      <h4>Start the application:</h4>
+      <code>npm start</code>
+      or 
+      <code>yarn start</code>
+    </li>
+    <li>
+      <h4>Go to http://localhost:3000 to view the application</h4>
+    </li>
+  </ol>
+</details>
